@@ -524,7 +524,7 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button data-modal-close class="button-close">
-          <svg width="17px" height="17px">
+          <svg class="icon-button-close" width="17px" height="17px">
             <use href="./images/icons/symbol-defs.svg#icon-close"></use>
           </svg>
         </button>
@@ -533,34 +533,48 @@
           <h3 class="title-modal">Оставьте свои данные, мы вам перезвоним</h3>
           <div class="form-field">
             <label class="label-styles" for="username"> Имя </label>
-            <svg class="icon-form-modal" width="12px" height="12px">
-              <use href="./images/icons/symbol-defs.svg#icon-person"></use>
-            </svg>
-            <input
-              class="input-styles"
-              type="text"
-              name="username"
-              id="username"
-            />
+
+            <div class="container-input">
+              <svg class="icon-form-modal" width="18px" height="18px">
+                <use href="./images/icons/symbol-defs.svg#icon-person"></use>
+              </svg>
+              <input
+                class="input-styles"
+                type="text"
+                name="username"
+                id="username"
+              />
+            </div>
           </div>
           <div class="form-field">
             <label class="label-styles" for="phone-number"> Телефон </label>
-            <svg class="icon-form-modal" width="13px" height="13px">
-              <use href="./images/icons/symbol-defs.svg#icon-phone"></use>
-            </svg>
-            <input
-              class="input-styles"
-              type="tel"
-              name="phone-number"
-              id="phone-number"
-            />
+
+            <div class="container-input">
+              <svg class="icon-form-modal" width="18px" height="18px">
+                <use href="./images/icons/symbol-defs.svg#icon-phone"></use>
+              </svg>
+              <input
+                class="input-styles"
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+              />
+            </div>
           </div>
           <div class="form-field">
             <label class="label-styles" for="email"> Почта </label>
-            <svg class="icon-form-modal" width="15px" height="12px">
-              <use href="./images/icons/symbol-defs.svg#icon-email"></use>
-            </svg>
-            <input class="input-styles" type="email" name="email" id="email" />
+
+            <div class="container-input">
+              <svg class="icon-form-modal" width="18px" height="18px">
+                <use href="./images/icons/symbol-defs.svg#icon-email"></use>
+              </svg>
+              <input
+                class="input-styles"
+                type="email"
+                name="email"
+                id="email"
+              />
+            </div>
           </div>
           <div class="form-field">
             <label class="label-styles" for="comment"> Комментарий </label>
@@ -575,12 +589,13 @@
           <div class="form-field">
             <label>
               <input
-                class="agreements"
+                class="agreements-checkbox"
                 type="checkbox"
                 name="agreement"
                 value="agreement"
                 checked
               />
+              <span class="checkbox"></span>
               <span class="agreements-text"
                 >Соглашаюсь с рассылкой и принимаю
               </span>
