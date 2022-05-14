@@ -925,18 +925,9 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-styles:focus,
-.input-styles:hover {
+.input-styles:focus {
   outline: none;
   border-color: var(--accent-color);
-}
-
-.form-field:hover .icon-form-modal {
-  fill: var(--accent-color);
-
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container-input:focus-within > .icon-form-modal {
@@ -980,8 +971,7 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.textarea:focus,
-.textarea:hover {
+.textarea:focus {
   outline: none;
   border-color: var(--accent-color);
 }
@@ -990,7 +980,11 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.agreements-checkbox {
+.form-check {
+  margin-bottom: 30px;
+}
+
+.modal-check {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1004,17 +998,21 @@ body {
   overflow: hidden;
 }
 
-.checkbox {
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  border: solid 2px #212121;
-  border-radius: 4px;
+.container-agreements {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
-.agreements-text {
-  margin-bottom: 30px;
-  display: inline-block;
+.icon-checkbox {
+  fill: transparent;
+}
+
+.modal-check-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   font-weight: 400;
   font-size: 14px;
@@ -1022,6 +1020,47 @@ body {
   letter-spacing: 0.03em;
 
   color: #757575;
+}
+
+.modal-check-text .icon-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: solid 2px #212121;
+  border-radius: 4px;
+  margin-right: 7px;
+
+  transition-property: fill;
+  transition-duration: 2500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-check-text .icon-check:hover {
+  border-color: var(--accent-color);
+}
+
+.modal-check:focus + .modal-check-text .icon-check {
+  border-color: var(--accent-color);
+}
+
+.modal-check:checked + .modal-check-text .icon-check {
+  background-color: var(--accent-color);
+  border: none;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-check:checked + .modal-check-text .icon-checkbox {
+  fill: #ffffff;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .agreements-text-styles {
