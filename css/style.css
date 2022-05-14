@@ -1032,18 +1032,22 @@ body {
   border: solid 2px #212121;
   border-radius: 4px;
   margin-right: 7px;
-
-  transition-property: fill;
-  transition-duration: 2500ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-check-text .icon-check:hover {
   border-color: var(--accent-color);
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-check:focus + .modal-check-text .icon-check {
   border-color: var(--accent-color);
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-check:checked + .modal-check-text .icon-check {
